@@ -197,7 +197,6 @@ nav a.dark-mode:hover{
     justify-content: space-between;
     align-items: flex-start;
     padding: 2em;
-    background-color: #e4aec5;
     background-size: cover;
     flex-wrap: wrap;
     display:flex;
@@ -333,7 +332,7 @@ footer a {
     width: 70%;
     height: 100%;
     top: 30%;
-    animation: abomination1 6s linear 1;
+    animation: abomination1 5s linear 1;
     animation-fill-mode: forwards;
     text-align:left;
   }
@@ -480,7 +479,6 @@ height: 100%;
 }
 
 .case-studies-title{
-    color:#82A284;
     text-align:center;
     padding:0.5em 0em;
 }
@@ -495,7 +493,7 @@ height: 100%;
     display: grid;
     grid-template-columns: repeat(2, 0.5fr); 
     gap: 3em; 
-    padding: 3em 10em;
+    padding: 3em 5vw;
     justify-items: center;
   }
 
@@ -538,7 +536,7 @@ height: 100%;
     display:flex;
     color:#446A46;
     font-size: 2em;
-    font-family:'chivo';
+    font-family:'tino';
     text-decoration:none;
 }
 
