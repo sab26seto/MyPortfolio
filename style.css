@@ -1,0 +1,633 @@
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ @media (max-width: 1024px) {
+    h1 {
+      font-size: 6em;
+    }
+  
+    .about-me-content {
+      width: 100%;
+      float: none;
+    }
+  
+    .frames {
+      height: 30vh;
+    }
+  
+    .case-images {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 4em;
+      text-align: center;
+      margin-left: 0;
+    }
+  
+    p {
+      margin: 1em;
+      font-size: 1.2em;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      gap: 1em;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+h1{
+    font-size:9em;
+    letter-spacing: 0.3em;
+    margin: 0.8em 0em 0em 1em;
+    font-weight: bold;
+    font-family:'chivo';
+    color: #F7EBD3;
+}
+h2 {
+    color:#446A46;
+    font-family: 'chivo';
+    text-align:center;
+    font-size:5.4em;
+    letter-spacing: 0.1em;
+}
+
+p {
+    margin:2em;
+    margin-left:4em;
+    color:#446A46;
+    font-size:1.5em;
+    font-family:'tinos-regular';
+}
+
+.tinos-regular {
+    font-family: "Tinos", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .tinos-bold {
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .tinos-regular-italic {
+    font-family: "Tinos", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .tinos-bold-italic {
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  .chivo {
+    font-family: "Chivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }   
+
+
+
+nav{
+    z-index: 1;
+    width:100%;
+    position:fixed;
+}
+
+nav li{
+    display: inline;
+    
+}
+
+nav li.spacer {
+    flex-grow:1;
+}
+
+nav ul > li:not(.navbar-brand):not(.spacer) {
+    margin-left: 3vw;
+}
+
+nav a {
+    text-decoration: none;
+    color: #446A46;
+    font-size: 1.5em;
+    font-family: 'tinos-regular';
+    margin-top:3vh;
+    margin-bottom:3vh;
+}
+
+nav a.dark-mode {
+    color:#F7EBD3;
+ }
+
+nav a:hover {
+    color:#82A284;  
+}
+
+nav a.dark-mode:hover{
+    color:#e4aec5;
+}
+
+.navbar-brand {
+    font-size: 1.6em;
+    gap:0.5em;
+    font-family: 'chivo';
+    color: #446A46;
+    white-space:nowrap;
+    padding-top:0.3em;
+    padding-bottom:0.3em;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.navbar-brand.dark-mode{
+    color:#F7EBD3;
+}
+
+.navbar-brand.show-brand {
+    opacity: 1;
+  }
+
+.navbar-links {
+    display:flex;
+    gap:2vw;
+    list-style:none;
+    margin:0;
+    padding:0;
+    justify-content:flex-end;
+    padding-right:1em;
+}
+
+.navbar-scrolled {
+    background-color:#F7EBd3;
+    box-shadow: 0 3px 10px #FFC4DD;
+    
+}
+
+.navbar{
+    transition: all 0.5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 4vh 4vw; 
+    position: fixed;
+    width: 100%;
+}
+
+.footer-wrapper{
+    background-image: url('../MyPortfolio/assets/dark-pink-swirly.png');
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2em;
+    background-color: #e4aec5;
+    background-size: cover;
+    flex-wrap: wrap;
+    display:flex;
+}
+    
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 0.5em;
+    padding: 2em;
+    max-width:65vw;
+    width:100%;
+  }
+
+  .footer-grid a {
+    text-decoration: none;
+    color: #446A46;
+    font-size: 1.5em;
+    text-align:left;
+  }
+
+  .footer-grid a:hover {
+    color:#82A284
+  }
+
+  .footer-img{
+    max-width: 15%;
+    height:auto;
+    padding:2em;
+  }
+
+footer a {
+    text-decoration: none;
+    color: #446A46;
+    font-size: 1.5em;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    font-family: 'tinos';
+    text-align:right;
+    margin-top:2em;
+   
+}
+@media (max-width: 600px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      max-width:100%;
+    }
+  }
+   .footer-img{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+   }
+
+   a.media-link img{
+    height:2em;
+    width:auto;
+    display:inline-block;
+   }
+
+
+/* Dropdown Button */
+    .dropbutton {
+        background: none;
+        color: #446A46;
+        font-size: 1.5em;
+        font-family: 'tinos-regular';
+        border:none;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #F7EBd3;
+        width: 100%;
+        z-index: 1;
+        text-align: center;
+        height:17em;
+    }
+    @media (max-width: 768px) {
+        .dropdown-content {
+          width: auto;
+          min-width: 150px;
+          height: auto;
+        }
+      }
+
+    .dropdown-content a {
+        color: #446A46;
+        font-size: 1.2em;
+        font-family:'tinos-regular';
+        padding: 15px 30px;
+        text-decoration:none;
+        display: block;
+        margin-right:5em;
+        height:0.2em;
+    }
+
+    .dropdown-content a:hover {
+        color:#82A284;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display:block;
+    }
+
+    .dropdown:hover .dropbutton {
+        color:#82A284;
+    }
+
+
+.parallax-img {
+    background: url('../MyPortfolio/assets/lily-upclose2.jpg');
+    /* parallax effect*/
+    min-height:100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.title h1:after{
+
+    position: absolute;
+    content: "";
+    width: 70%;
+    height: 100%;
+    top: 30%;
+    animation: abomination1 6s linear 1;
+    animation-fill-mode: forwards;
+    text-align:left;
+  }
+  
+  
+    @keyframes abomination1 {
+    0% {
+      content: "S";
+    }
+    10% {
+      content: "Sa";
+    }
+    23% {
+      content: "Sab";
+    }
+    30% {
+      content: "Sabr";
+    }
+    37% {
+      content: "Sabri";
+    }
+    44% {
+      content: "Sabrin";
+    }
+    51% {
+      content: "Sabrina";
+    }
+    58% {
+      content: "Sabrinaa";
+    }
+    65% {
+      content: "Sabrina";
+    }
+    72% {
+      content: "Sabrina ";
+    }
+    79% {
+      content: "Sabrina S";
+    }
+    86% {
+      content: "Sabrina Se";
+    }
+    93% {
+      content: "Sabrina Set";
+    }
+    100% {
+      content: "Sabrina Seto";
+    } }
+
+    .fade-in-text {
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 6.4s;
+      }
+    
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+div.about-contents {
+    display:flex;
+    flex-wrap:wrap;
+    align-items: stretch;
+}
+
+.about-me-content {
+    flex: 1 1 50%;
+    box-sizing:border-box;
+}
+@media (max-width: 768px) {
+    .about-me-content {
+      width: 100%;
+    }
+  }
+
+.left {
+background: url('../MyPortfolio/assets/Swirly-light-pink.png');
+display: flex;
+justify-content: center;
+align-items: center;
+height:100%
+}
+
+.framed-portrait{
+    max-width:70%;
+    height:auto;
+    padding:1em;
+    object-fit:contain;
+    box-sizing:border-box;
+}
+.right {
+background-color: #F7EBD3;
+color:#446A46;
+display:flex;
+flex-direction:column;
+justify-content: center;
+height: 100%;
+}
+  
+.slide-animation{
+    width:100%;
+    overflow:hidden;
+}
+
+.slide-animation p{
+    opacity:0;
+    transform: translateX(100%);
+    transition: transform 1s ease-out, opacity 0.8s ease-out;
+    will-change: transform, opacity;
+}
+
+.slide-animation p.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+@keyframes slide-left {
+    to{transform: translateX(0%);
+    opacity:1;}
+}
+
+.slide-animation p:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  .slide-animation p:nth-of-type(2) {
+    animation-delay: 0.3s;
+  }
+  .slide-animation p:nth-of-type(3) {
+    animation-delay: 0.6s;
+  }
+
+.mini-title {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+}
+
+.case-studies {
+    background: #FFC4DD;
+    background: linear-gradient(37deg, rgba(255, 196, 221, 1) 0%, rgba(247, 235, 211, 1) 95%);
+    height: auto;
+}
+
+.case-studies-title{
+    color:#82A284;
+    text-align:center;
+    padding:0.5em 0em;
+}
+
+.frames {
+    height:50vh;
+    padding-left:1em;
+    padding-right:1em;
+}
+
+.case-images {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr); 
+    gap: 3em; 
+    padding: 3em 10em;
+    justify-items: center;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .case-item {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: slideUp 1s ease-out forwards;
+  }
+  
+  /* Stagger the animations */
+  .case-item:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .case-item:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .case-item:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  .case-item:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  
+  
+
+.case-titles{
+    text-align: center;
+    justify-content: center;
+    display:flex;
+    color:#446A46;
+    font-size: 2em;
+    font-family:'chivo';
+    text-decoration:none;
+}
+
+.case-images a:hover {
+    color:#82A284;
+}
+
+/* dark mode*/
+body.dark-mode {
+    background-color: #446A46;
+    color: #F7EBD3;
+  }
+ 
+  body.dark-mode h2,
+  body.dark-mode p {
+    color: #F7EBD3;
+  }
+  
+  nav a.dark-mode {
+    color: #F7EBD3;
+    background-color:#446A46;
+  }
+  
+  nav a.dark-mode:hover {
+    color: #e4aec5;
+  }
+  
+  .navbar-brand.dark-mode {
+    color: #F7EBD3;
+  }
+  
+  .navbar-scrolled.dark-mode {
+    background-color: #446A46;
+    box-shadow: 0 3px 10px #82A284;
+  }
+
+
+  body.dark-mode .dropbutton{
+    color:#F7EBd3;
+    background-color: #446A46;
+  }
+
+  body.dark-mode .dropbutton:hover{
+    color:#F7EBd3;
+  }
+
+  body.dark-mode .dropdown-content{
+    background-color:#446A46;
+  }
+  
+  body.dark-mode .dropdown-content a{
+    color:#F7EBd3;
+  }
+
+  body.dark-mode .dropdown-content a:hover{
+    color:#FFC4DD;
+  }
+
+  .dropdown:hover .dropbutton.dark-mode {
+    color:#FFC4DD;
+    }
+
+  .right.dark-mode {
+    background-color:#446A46;
+  }
+
+  .case-studies.dark-mode {
+    background: #446A46;
+    background: linear-gradient(37deg, rgba(68, 106, 70, 1) 65%, rgba(130, 162, 132, 1) 100%);
+}
+.case-studies-title.dark-mode{
+    color:#FFC4DD;
+}
+
+.case-titles.dark-mode {
+    color:#F7EBd3;
+}
+.case-titles.dark-mode:hover {
+    color:#FFC4DD;
+}
+  
+  #toggleMode {
+    background-color: #FFC4DD;
+    color: #446A46;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  
